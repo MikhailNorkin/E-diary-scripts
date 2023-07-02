@@ -4,7 +4,7 @@
 
 # Назначение фукций
 
-Функция `create_commendation(child_name,Subject_name)` находит последнюю дату урока для ученика (ФИО параметр - child_name) и предмету (параметр Subject_name) и созадет похвалу.
+Функция `create_commendation(child_name,Subject_name)` находит последнюю дату урока для ученика c ФИО (параметр - child_name) и предмету (параметр Subject_name) и созадет похвалу.
 
 Функция `fix_marks(schoolkid)` находит по ученику (параметр schoolkid) все оцеки 2 и 3 и заменяет их на 5.
 

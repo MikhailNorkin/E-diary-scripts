@@ -11,7 +11,6 @@ def create_commendation(child_name,Subject_name):
 	from datacenter.models import Lesson
 	from datacenter.models import Commendation
 	from datacenter.models import Schoolkid
-	import random
 	try:
 		schoolkid_child = Schoolkid.objects.filter(full_name__contains=child_name).get()
 	except ObjectDoesNotExist:
