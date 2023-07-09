@@ -32,7 +32,7 @@ def create_commendation(child_name,subject_name):
 
 def fix_marks(schoolkid):
 	from datacenter.models import Mark
-	marks_child = Mark.objects.filter(schoolkid=schoolkid,points__in=[2,3])
+	marks_child = list(Mark.objects.filter(schoolkid=schoolkid,points__in=[2,3]))
 	for mark in marks_child:
 		mark.points = 5
 		mark.save()
