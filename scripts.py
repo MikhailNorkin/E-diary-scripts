@@ -32,13 +32,10 @@ def create_commendation(child_name,subject_name):
 
 def fix_marks(schoolkid):
 	from datacenter.models import Mark
-	marks_child = list(Mark.objects.filter(schoolkid=schoolkid,points__in=[2,3]))
-	for mark in marks_child:
-		mark.points = 5
-		mark.save()
+	Mark.objects.filter(schoolkid=schoolkid, points__in=[2, 3]).update(points=5)
 
 
 def remove_chastisements(schoolkid):
 	from datacenter.models import Chastisement
-	Chastisements = Chastisement.objects.filter(schoolkid=schoolkid)
-	Chastisements.delete()
+	chastisements = Chastisement.objects.filter(schoolkid=schoolkid)
+	chastisements.delete()
